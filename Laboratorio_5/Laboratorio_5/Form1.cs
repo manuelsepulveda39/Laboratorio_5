@@ -55,11 +55,11 @@ namespace Laboratorio_5
         /// <param name="panel">Panel en el que se está mostrando el juego.</param>
         /// <param name="posicionx">Posición en el eje X donde se creará la nueva parte de la serpiente.</param>
         /// <param name="posiciony">Posición en el eje Y donde se creará la nueva parte de la serpiente.</param>
-        public void crearSnake(List<PictureBox> listaSnake, Panel panel, int posicionx, int posiciony)
+        public void crearSnake(List<PictureBox> listaSnake, Panel panel, int posicionX, int posicionY)
         {
             PictureBox pb = new PictureBox();
 
-            pb.Location = new Point(posicionx, posiciony);
+            pb.Location = new Point(posicionX, posicionY);
             pb.BackgroundImage = (Bitmap)Properties.Resources.ResourceManager.GetObject("snake body");
             pb.BackColor = Color.Transparent;
             pb.Size = new Size(25, 25);
@@ -75,17 +75,24 @@ namespace Laboratorio_5
         private void crearManzana()
         {
             Random random = new Random();
-            int x = random.Next(1, panel.Width - tamanoPiezaPrincipal);
-            int y = random.Next(1, panel.Height - tamanoPiezaPrincipal);
+            int posX;
+            int posY;
+
+            //Ciclo para que las posiciones sean multiplos de 25
+            do
+            {
+                posX = random.Next(1, panel.Width - tamanoPiezaPrincipal);
+                posY = random.Next(1, panel.Height - tamanoPiezaPrincipal);
+            } while (posX % 25 != 0 || posY % 25 != 0);
 
             PictureBox manzana = new PictureBox();
 
-            manzana.Location = new Point(x, y);
-            manzana.Image = (Bitmap)Properties.Resources.ResourceManager.GetObject("Apple Tile");
-            manzana.BackgroundImageLayout = ImageLayout.Stretch;
-            manzana.Size = new Size(25, 25);
-            manzana = this.manzana;
+            manzana.Location = new Point(posX, posY);
+            manzana.BackgroundImage = (Bitmap)Properties.Resources.ResourceManager.GetObject("Apple Tile");
+            this.manzana = manzana;
             manzana.BackColor = Color.Transparent;
+            manzana.Size = new Size(25, 25);
+            manzana.BackgroundImageLayout = ImageLayout.Stretch;
 
             panel.Controls.Add(manzana);
 
@@ -100,6 +107,7 @@ namespace Laboratorio_5
         /// <param name="e"></param>
         private void botonEmpezar_Click(object sender, EventArgs e)
         {
+            puntos.Text = "0";
             iniciarJuego();
         }
 
@@ -168,9 +176,9 @@ namespace Laboratorio_5
                     panel.Controls.Remove(manzana);
                     tiempo = Convert.ToInt32(timer1.Interval);
 
-                    if (tiempo > 10)
+                    if (tiempo > 4)
                     {
-                        timer1.Interval = tiempo - 10;
+                        timer1.Interval = tiempo - 4;
                     }
 
                     puntos.Text = (Convert.ToInt32(puntos.Text) + 1).ToString();
@@ -183,8 +191,8 @@ namespace Laboratorio_5
             }
 
 
-            if ((lista[0].Location.X >= panel.Width - 15) || (lista[0].Location.Y >= panel.Height - 50) ||
-                    (lista[0].Location.Y < -10) || (lista[0].Location.X < -30))
+            if ((lista[0].Location.X >= panel.Width) || (lista[0].Location.Y >= panel.Height) ||
+                    (lista[0].Location.Y < -10) || (lista[0].Location.X < -20))
             {
                 finJuego();
             }
@@ -195,12 +203,12 @@ namespace Laboratorio_5
         /// </summary>
         private void finJuego()
         {
+            
             timer1.Enabled = false;
             lista.Clear();
             panel.Controls.Clear();
-
-            Form2 form2 = new Form2();
-            form2.nuevoPuntaje = Convert.ToInt32(puntos.Text);
+            int puntaje = int.Parse(puntos.Text);
+            Form2 form2 = new Form2(puntaje);
             form2.ShowDialog();
 
             botonEmpezar.Enabled = true;
@@ -232,5 +240,15 @@ namespace Laboratorio_5
             }
         }
 
+        /// <summary>
+        /// Boton para abrir formulario de los mejores puntajes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void mejoresPuntajes_Click(object sender, EventArgs e)
+        {
+            mejoresPunt mejoresPunt = new mejoresPunt();
+            mejoresPunt.Show();
+        }
     }
 }

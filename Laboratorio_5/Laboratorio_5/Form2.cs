@@ -12,38 +12,33 @@ namespace Laboratorio_5
 {
     public partial class Form2 : Form
     {
-        public List<Jugadores> jugadores = new List<Jugadores>();
-        Jugadores nuevoJugador;
-        public int nuevoPuntaje { get; set; }
+        int puntaje;
 
         /// <summary>
         /// Método generado automaticamente
         /// </summary>
-        public Form2()
+        public Form2(int punt)
         {
             InitializeComponent();
-
-            lblPuntajeF.Text = nuevoPuntaje.ToString();
+            this.puntaje = punt;
+            lblPuntajeF.Text = puntaje.ToString();
         }
 
         /// <summary>
         /// Método que se ejecuta cuando el usuario hace click en el botón guardar.
-        /// Crea un nuevo objeto jugador, lo agrega a la lista y actualiza el ranking.
+        /// Crea un nuevo objeto jugador, lo agrega al vector y actualiza el ranking.
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Jugadores nuevoJugador = new Jugadores();
-            nuevoJugador.nombreJugador = txtBoxNombre.Text;
-            nuevoJugador.fecha = DateTime.Now;
-            nuevoJugador.puntaje = nuevoPuntaje;
+            String nombreJugador = txtBoxNombre.Text;
+            DateTime fecha = DateTime.Now;
+            int puntaje = this.puntaje;
 
-            jugadores.Add(nuevoJugador);
-
-            jugadores = jugadores.OrderByDescending(jugadorNuevo => jugadorNuevo.puntaje).ToList();
-
-            List<Jugadores> mejoresPuntajes = jugadores.Take(5).ToList();
+            //Se guarda la instancia y se llama el metodo de agregar Jugador
+            Jugadores jugadores = Jugadores.obtenerInstancia();
+            jugadores.agregarJugador(nombreJugador, puntaje, fecha);
 
             Close();
         }

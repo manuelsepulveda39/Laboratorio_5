@@ -59,6 +59,7 @@
             this.mejoresPuntajes.TabIndex = 1;
             this.mejoresPuntajes.Text = "Mejores Puntajes";
             this.mejoresPuntajes.UseVisualStyleBackColor = true;
+            this.mejoresPuntajes.Click += new System.EventHandler(this.mejoresPuntajes_Click);
             // 
             // botonEmpezar
             // 
