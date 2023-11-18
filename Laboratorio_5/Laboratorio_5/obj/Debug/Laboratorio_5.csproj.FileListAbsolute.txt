@@ -8,3 +8,14 @@ C:\Users\Usuario\Documents\manuel\programacion\Laboratorio_5\Laboratorio_5\Labor
 C:\Users\Usuario\Documents\manuel\programacion\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.csproj.CoreCompileInputs.cache
 C:\Users\Usuario\Documents\manuel\programacion\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.exe
 C:\Users\Usuario\Documents\manuel\programacion\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.pdb
+C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\bin\Debug\Laboratorio_5.exe.config
+C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\bin\Debug\Laboratorio_5.exe
+C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\bin\Debug\Laboratorio_5.pdb
+C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.csproj.AssemblyReference.cache
+C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.Snake.resources
+C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.Properties.Resources.resources
+C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.csproj.GenerateResource.cache
+C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.csproj.CoreCompileInputs.cache
+C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.exe
+C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.pdb
+C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.Form2.resources

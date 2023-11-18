@@ -93,9 +93,19 @@ namespace Laboratorio_5.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap snake_body {
+        internal static System.Drawing.Bitmap snake_bodyB {
             get {
-                object obj = ResourceManager.GetObject("snake body", resourceCulture);
+                object obj = ResourceManager.GetObject("snake bodyB", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap snake_bodyLR {
+            get {
+                object obj = ResourceManager.GetObject("snake bodyLR", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
