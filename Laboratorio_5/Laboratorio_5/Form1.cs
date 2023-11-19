@@ -99,8 +99,6 @@ namespace Laboratorio_5
             manzana.BackgroundImageLayout = ImageLayout.Stretch;
 
             panel.Controls.Add(manzana);
-
-
         }
 
         /// <summary>
@@ -165,7 +163,6 @@ namespace Laboratorio_5
                             lista[j].BackgroundImage = (Bitmap)Properties.Resources.ResourceManager.GetObject("snake bodyB");
                         }
                     }
-
                 }
                 else
                 {
@@ -173,8 +170,6 @@ namespace Laboratorio_5
                     lista[i].Location = new Point(lista[i].Location.X, lista[i - 1].Location.Y);
                 }
             }
-
-          
 
             for (int contarPiezas = 1; contarPiezas < lista.Count; contarPiezas++)
             {
@@ -185,7 +180,7 @@ namespace Laboratorio_5
 
                     if (tiempo > 4)
                     {
-                        timer1.Interval = tiempo - 4;
+                        //timer1.Interval = tiempo - 4;
                     }
 
                     puntos.Text = (Convert.ToInt32(puntos.Text) + 1).ToString();
@@ -197,7 +192,6 @@ namespace Laboratorio_5
                 }
             }
 
-
             if ( lista[0].Location.X == panel.Width || lista[0].Location.Y == panel.Height ||
                     lista[0].Location.Y < -10 || lista[0].Location.X < -20)
             {
@@ -205,7 +199,6 @@ namespace Laboratorio_5
             }
             else
             {
-
                 for (int cuerpo = 1; cuerpo < lista.Count; cuerpo++)
                 {
                     if (lista[0].Location.X == lista[cuerpo].Location.X && lista[0].Location.Y == lista[cuerpo].Location.Y)
@@ -214,7 +207,6 @@ namespace Laboratorio_5
                         break;
                     }
                 }
-
             }
         }
 
@@ -243,23 +235,20 @@ namespace Laboratorio_5
         {
             if (direccion != "R")
             {
-                direccion = ((e.KeyCode & Keys.Left) == Keys.Left) ? "L" : direccion;
+                direccion = (e.KeyCode == Keys.Left) ? "L" : direccion;
             }
             if (direccion != "B")
             {
-                direccion = ((e.KeyCode & Keys.Down) == Keys.Down) ? "" : direccion;
+                direccion = (e.KeyCode == Keys.Down) ? "" : direccion;
             }
             if (direccion != "")
             {
-                direccion = ((e.KeyCode & Keys.Up) == Keys.Up) ? "B" : direccion;
+                direccion = (e.KeyCode == Keys.Up) ? "B" : direccion;
             }
             if (direccion != "L")
             {
-                direccion = ((e.KeyCode & Keys.Right) == Keys.Right) ? "R" : direccion;
+                direccion = (e.KeyCode == Keys.Right) ? "R" : direccion;
             }
-           
-
-
         }
 
         /// <summary>

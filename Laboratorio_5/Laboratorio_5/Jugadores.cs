@@ -47,10 +47,10 @@ namespace Laboratorio_5
         /// <param name="fecha">Fecha en la que jugó.</param>
         public void agregarJugador(string nombre, int puntaje, DateTime fecha)
         {
-            if (cantidadJugadores == 5)
+            if (cantidadJugadores == 4)
             {
                 //Si ya hay inscritos 5 jugadores se eliminara al peor y se agregara el nuevo
-                for (int i = 0; i < 5; i++)
+                for (int i = 0; i < cantidadJugadores; i++)
                 {
                     if (vectorJugadores[i].puntaje < puntaje)
                     {
@@ -58,7 +58,6 @@ namespace Laboratorio_5
                         {
                             vectorJugadores[j] = vectorJugadores[j - 1];
                         }
-
                         vectorJugadores[i] = new Jugador(nombre, fecha, puntaje);
                         break;
                     }
