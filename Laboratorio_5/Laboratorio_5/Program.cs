@@ -6,6 +6,9 @@ using System.Windows.Forms;
 
 namespace Laboratorio_5
 {
+    /// <summary>
+    /// Clase de entrada a la aplicación
+    /// </summary>
     internal static class Program
     {
         /// <summary>

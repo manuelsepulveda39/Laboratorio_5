@@ -10,9 +10,14 @@ using System.Windows.Forms;
 
 namespace Laboratorio_5
 {
+    /// <summary>
+    /// Clase que muestra los mejores cinco puntajes que se han obtenido en el juego.
+    /// </summary>
     public partial class mejoresPunt : Form
     {
-        //Metodo que se ejecuta al iniciar el formulario
+        /// <summary>
+        /// Metodo que se ejecuta al iniciar el formulario.
+        /// </summary>
         public mejoresPunt()
         {
             InitializeComponent();
@@ -52,8 +57,9 @@ namespace Laboratorio_5
                 labelPuntaje5.Text = jugadores.vectorJugadores[4].puntaje.ToString();
             }
         }
+
         /// <summary>
-        /// Boton para cerrar formulario
+        /// Botón para cerrar formulario
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

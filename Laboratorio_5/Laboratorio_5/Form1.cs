@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace Laboratorio_5
 {
+    /// <summary>
+    /// Clase que contiene los métodos escenciales del juego.
+    /// </summary>
     public partial class Snake : Form
     {
         List<PictureBox> lista = new List<PictureBox>();
@@ -83,6 +86,7 @@ namespace Laboratorio_5
             {
                 posX = random.Next(1, panel.Width - tamanoPiezaPrincipal);
                 posY = random.Next(1, panel.Height - tamanoPiezaPrincipal);
+
             } while (posX % 25 != 0 || posY % 25 != 0);
 
             PictureBox manzana = new PictureBox();
@@ -142,10 +146,11 @@ namespace Laboratorio_5
                     {
                         ny = ny + tamanoPiezaPrincipal;
                     }
+                    
                     lista[0].BackgroundImage = (Bitmap)Properties.Resources.ResourceManager.GetObject("snake head" + direccion);
                     lista[0].Location = new Point(nx, ny);
 
-                    // Para que cambie el cuerpo de imagen, segun la direccion
+                    //Para que la direccion del cuepo tambien cambie
                     if (direccion == "R" || direccion == "L")
                     {
                         for (int j = 1; j < lista.Count; j++)
@@ -169,6 +174,8 @@ namespace Laboratorio_5
                 }
             }
 
+          
+
             for (int contarPiezas = 1; contarPiezas < lista.Count; contarPiezas++)
             {
                 if (lista[contarPiezas].Bounds.IntersectsWith(manzana.Bounds))
@@ -191,10 +198,23 @@ namespace Laboratorio_5
             }
 
 
-            if ((lista[0].Location.X >= panel.Width) || (lista[0].Location.Y >= panel.Height) ||
-                    (lista[0].Location.Y < -10) || (lista[0].Location.X < -20))
+            if ( lista[0].Location.X == panel.Width || lista[0].Location.Y == panel.Height ||
+                    lista[0].Location.Y < -10 || lista[0].Location.X < -20)
             {
                 finJuego();
+            }
+            else
+            {
+
+                for (int cuerpo = 1; cuerpo < lista.Count; cuerpo++)
+                {
+                    if (lista[0].Location.X == lista[cuerpo].Location.X && lista[0].Location.Y == lista[cuerpo].Location.Y)
+                    {
+                        finJuego();
+                        break;
+                    }
+                }
+
             }
         }
 
@@ -203,12 +223,11 @@ namespace Laboratorio_5
         /// </summary>
         private void finJuego()
         {
-            
             timer1.Enabled = false;
             lista.Clear();
             panel.Controls.Clear();
             int puntaje = int.Parse(puntos.Text);
-            Form2 form2 = new Form2(puntaje);
+            GuardarJuego form2 = new GuardarJuego(puntaje);
             form2.ShowDialog();
 
             botonEmpezar.Enabled = true;
@@ -222,6 +241,10 @@ namespace Laboratorio_5
         /// <param name="e"></param>
         private void moverPieza(object sender, KeyEventArgs e)
         {
+            if (direccion != "R")
+            {
+                direccion = ((e.KeyCode & Keys.Left) == Keys.Left) ? "L" : direccion;
+            }
             if (direccion != "B")
             {
                 direccion = ((e.KeyCode & Keys.Down) == Keys.Down) ? "" : direccion;
@@ -234,10 +257,9 @@ namespace Laboratorio_5
             {
                 direccion = ((e.KeyCode & Keys.Right) == Keys.Right) ? "R" : direccion;
             }
-            if (direccion != "R")
-            {
-                direccion = ((e.KeyCode & Keys.Left) == Keys.Left) ? "L" : direccion;
-            }
+           
+
+
         }
 
         /// <summary>

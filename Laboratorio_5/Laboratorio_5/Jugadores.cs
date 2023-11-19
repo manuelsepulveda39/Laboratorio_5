@@ -9,7 +9,7 @@ using System.Windows.Forms;
 namespace Laboratorio_5
 {
     /// <summary>
-    /// Clase para manipular el vector de los mejores jugadores
+    /// Clase para manipular el vector de los mejores jugadores.
     /// </summary>
     public class Jugadores
     {
@@ -42,12 +42,12 @@ namespace Laboratorio_5
         /// <summary>
         /// Este metodo es para agregar y organizar el vector de jugadores
         /// </summary>
-        /// <param name="nombre"></param>
-        /// <param name="puntaje"></param>
-        /// <param name="fecha"></param>
+        /// <param name="nombre">Nombre del jugador nuevo.</param>
+        /// <param name="puntaje">Puntaje que obtuvo.</param>
+        /// <param name="fecha">Fecha en la que jugó.</param>
         public void agregarJugador(string nombre, int puntaje, DateTime fecha)
         {
-            if (cantidadJugadores == 4)
+            if (cantidadJugadores == 5)
             {
                 //Si ya hay inscritos 5 jugadores se eliminara al peor y se agregara el nuevo
                 for (int i = 0; i < 5; i++)
@@ -60,6 +60,7 @@ namespace Laboratorio_5
                         }
 
                         vectorJugadores[i] = new Jugador(nombre, fecha, puntaje);
+                        break;
                     }
                 }
             }
@@ -79,5 +80,6 @@ namespace Laboratorio_5
                 cantidadJugadores++;
             }
         }
+
     }
 }

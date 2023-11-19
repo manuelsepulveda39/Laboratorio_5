@@ -10,14 +10,17 @@ using System.Windows.Forms;
 
 namespace Laboratorio_5
 {
-    public partial class Form2 : Form
+    /// <summary>
+    /// Clase que guarda la información de la partida.
+    /// </summary>
+    public partial class GuardarJuego : Form
     {
         int puntaje;
 
         /// <summary>
-        /// Método generado automaticamente
+        /// Método que se ejecuta al iniciar el formulario
         /// </summary>
-        public Form2(int punt)
+        public GuardarJuego(int punt)
         {
             InitializeComponent();
             this.puntaje = punt;

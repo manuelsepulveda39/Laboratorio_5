@@ -18,6 +18,7 @@ C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Labo
 C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.csproj.CoreCompileInputs.cache
 C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.exe
 C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.pdb
-C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.Form2.resources
 C:\Users\Usuario\Documents\manuel\programacion\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.Form2.resources
 C:\Users\Usuario\Documents\manuel\programacion\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.mejoresPunt.resources
+C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.mejoresPunt.resources
+C:\Users\saram\OneDrive\Escritorio\Cosas Lógica\LABORATORIOS\Laboratorio_5\Laboratorio_5\Laboratorio_5\obj\Debug\Laboratorio_5.GuardarJuego.resources

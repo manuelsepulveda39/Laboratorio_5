@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Laboratorio_5
 {
+    /// <summary>
+    /// Clase que administra la información de los jugadores.
+    /// </summary>
     public class Jugador
     {
         /// <summary>
@@ -26,9 +29,9 @@ namespace Laboratorio_5
         /// <summary>
         /// Metodo para guardar un nuevo jugador
         /// </summary>
-        /// <param name="nombre"></param>
-        /// <param name="fecha"></param>
-        /// <param name="puntaje"></param>
+        /// <param name="nombre">Nombre del jugador.</param>
+        /// <param name="fecha">Fecha en la que jugó.</param>
+        /// <param name="puntaje">Puntaje que obtuvo.</param>
         public Jugador(String nombre, DateTime fecha, int puntaje)
         {
             this.nombreJugador = nombre;
